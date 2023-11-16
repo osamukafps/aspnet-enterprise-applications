@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C1472AF0-34ED-4073-99AF-804B191CF219}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "web", "web", "{093F6308-53FA-4C4C-9904-DA36CB072682}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{B1825804-C81D-4C20-A765-8E8E7EF5BADF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "building blocks", "building blocks", "{DA4499BC-C802-4FBA-9C82-041B8EBF5E6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSE.Identidade.API", "NSE.Identidade.API\NSE.Identidade.API.csproj", "{2374F712-DE67-4998-8926-1FBC066649F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{093F6308-53FA-4C4C-9904-DA36CB072682} = {C1472AF0-34ED-4073-99AF-804B191CF219}
+		{B1825804-C81D-4C20-A765-8E8E7EF5BADF} = {C1472AF0-34ED-4073-99AF-804B191CF219}
+		{DA4499BC-C802-4FBA-9C82-041B8EBF5E6F} = {C1472AF0-34ED-4073-99AF-804B191CF219}
+		{2374F712-DE67-4998-8926-1FBC066649F0} = {B1825804-C81D-4C20-A765-8E8E7EF5BADF}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2374F712-DE67-4998-8926-1FBC066649F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2374F712-DE67-4998-8926-1FBC066649F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2374F712-DE67-4998-8926-1FBC066649F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2374F712-DE67-4998-8926-1FBC066649F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
