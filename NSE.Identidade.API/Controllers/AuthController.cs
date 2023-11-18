@@ -1,0 +1,44 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using NSE.Identidade.API.Models;
+
+namespace NSE.Identidade.API.Controllers;
+
+public class AuthController : Controller
+{
+    private readonly SignInManager<IdentityUser> _signInManager;
+    private readonly UserManager<IdentityUser> _userManager;
+
+    public AuthController(SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager)
+    {
+        _signInManager = signInManager;
+        _userManager = userManager;
+    }
+    
+    public async Task<ActionResult> Registrar(UsuarioRegistro usuarioRegistro)
+    {
+        if (!ModelState.IsValid)
+            return BadRequest();
+
+        var user = new IdentityUser
+        {
+            UserName = usuarioRegistro.Email,
+            Email = usuarioRegistro.Email,
+            EmailConfirmed = true
+        };
+
+        var result = await _userManager.CreateAsync(user, usuarioRegistro.Senha);
+
+        if (result.Succeeded)
+        {
+            await _signInManager.SignInAsync(user, isPersistent: false);
+            return Ok();
+        }
+    }
+
+
+    public async Task<ActionResult> Login(UsuarioLogin usuarioLogin)
+    {
+        
+    }
+}
